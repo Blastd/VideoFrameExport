@@ -1,0 +1,38 @@
+{
+	"author": "DrewTW",
+  "manifest_version": 2,
+  "name": "Video Frame extractor",
+  "version": "1.0",
+
+  "description": "This extension will try extracting any video's frame as a full image",
+
+  "browser_action": {
+    "default_icon": {
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "64": "icons/64.png",
+      "128": "icons/128.png"
+    }
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "VideoFrameExtract@DrewTW",
+      "strict_min_version": "56.0"
+    }
+  }
+}
+
